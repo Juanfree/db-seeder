@@ -1,6 +1,6 @@
 # About
 
-Database seeder based in https://github.com/emirozer/fake2db
+Database seeder based on https://github.com/emirozer/fake2db
 
 # Usage
 
