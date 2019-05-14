@@ -1,0 +1,22 @@
+version: '3.6'
+
+networks:
+  database:
+    external: true
+
+services:
+  db-seeder:
+    image: juanfree/db-seeder:latest
+    container_name: db-seeder
+    hostname: db-seeder
+    environment:
+      - NUMBER_OF_ROWS=${NUMBER_OF_ROWS}
+      - ENGINE_TYPE=${ENGINE_TYPE}
+      - NAME_OF_THE_DATABASE=${NAME_OF_THE_DATABASE}
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_PORT=${DATABASE_PORT}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - SEED_TYPE=${SEED_TYPE}
+    networks:
+      - database
